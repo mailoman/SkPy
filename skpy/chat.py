@@ -83,7 +83,7 @@ class SkypeChat(SkypeObj):
         msg.update({"composetime": datetime.strftime(clientDate, "%Y-%m-%dT%H:%M:%S.%fZ"),
                     "conversationLink": "{0}/users/ME/conversations/{1}".format(self.skype.conn.msgsHost, self.id),
                     "from": "{0}/users/ME/contacts/8:{1}".format(self.skype.conn.msgsHost, self.skype.userId),
-                    "imdisplayname": str(self.skype.user.name),
+                    "imdisplayname": unicode(self.skype.user.name),
                     "isactive": True,
                     "originalarrivaltime": datetime.strftime(arriveDate, "%Y-%m-%dT%H:%M:%S.%fZ"),
                     "type": "Message"})
